@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#new_user .container #new_user-row #new_user-column #new_user-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 450px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#new_user .container #new_user-row #new_user-column #new_user-box #new_user-form {
+  padding: 20px;
+}
+#new_user .container #new_user-row #new_user-column #new_user-box #new_user-form #register-link {
+  margin-top: -85px;
+}
