@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import "../assets/login_styles.css";
 import { Link } from 'react-router-dom'
 import AlertError from '../helpers/AlertError';
-import AlertCargando from '../helpers/AlertCargando';
-import AlertExito from '../helpers/AlertExito';
+import AlertLoading from '../helpers/AlertLoading';
+import AlertSuccess from '../helpers/AlertSuccess';
 import clienteAxios from "../config/axios";
 
 
@@ -21,15 +21,15 @@ const Login = ({ history }) => {
     }
 
     const handleSubmit = async (e) => {
+        // CHECK REQUIRED FIELDS
         e.preventDefault()
-        // revision de campos correctos
-        // consulta por axios
+        // SEND AXIOS REQUEST
         try {
-            AlertCargando('Auteniticando');
+            AlertLoading('Auteniticando');
             const respuesta = await clienteAxios.post('/login', credentials)
             if (respuesta.status === 200) {
                 // redireccion a interfaz principal
-                AlertExito('¡Bienvenido!')
+                AlertSuccess('¡Bienvenido!')
                 history.push('/main')
             } else {
                 AlertError("No se pudo auteniticar")

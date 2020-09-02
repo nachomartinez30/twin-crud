@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 
-const AlertaSiguiente = (msg, callBack) => {
+const AlertaNext = (msg, callBack) => {
     Swal.fire({
         title: '¿Esta seguro?',
         text: msg,
@@ -18,4 +18,4 @@ const AlertaSiguiente = (msg, callBack) => {
 }
 
 
-export default AlertaSiguiente;
+export default AlertaNext;

@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 
-const AlertAdvertencia = (msg) => {
+const AlertWarning = (msg) => {
     Swal.fire({
         title: msg,
         type: 'warning',
@@ -8,4 +8,4 @@ const AlertAdvertencia = (msg) => {
     })
 }
 
-export default AlertAdvertencia;
+export default AlertWarning;

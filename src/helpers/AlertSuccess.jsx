@@ -1,12 +1,12 @@
 import Swal from 'sweetalert2'
-const AlertExito = (msg, txt = null) => {
+const AlertSuccess = (msg, txt = null) => {
     Swal.fire({
         title: msg,
         icon: 'success',
-        timer: 2000,
+        timer: 1000,
         text: txt,
         showConfirmButton: false
     })
 }
 
-export default AlertExito;
+export default AlertSuccess;

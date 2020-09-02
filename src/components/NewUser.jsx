@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import "../assets/new_user_styles.css";
 import AlertError from '../helpers/AlertError';
-import AlertCargando from '../helpers/AlertCargando';
-import AlertExito from '../helpers/AlertExito';
+import AlertLoading from '../helpers/AlertLoading';
+import AlertSuccess from '../helpers/AlertSuccess';
 import clienteAxios from "../config/axios";
 
 
-const NuevoUsuario = ({ history }) => {
+const NewUser = ({ history }) => {
     const [credentials, setCredentials] = useState({
         email: "eve.holt@reqres.in",
         password: "pistol",
@@ -24,19 +24,19 @@ const NuevoUsuario = ({ history }) => {
     const handleSubmit = async (e) => {
         const { password, repit, email } = credentials
         e.preventDefault()
-        // REVISION DE CAMPOS REQUERIDOS
-        // REVISION DE CONTRASEÑAS
+        // CHECK REQUIRED FIELDS
+        // CHECK SAME PASSWORD
         if (password !== repit) {
             AlertError('No coinciden las contraseñas')
             return
         } else {
-            // ENVIO DE DATOS
+            // SEND DATA
             try {
-                // REDIRECCION A MAIN
-                AlertCargando('Registrando')
+                // REDIRECT TO MAIN
+                AlertLoading('Registrando')
                 const resp = await clienteAxios.post('/register', { email, password })
                 if (resp.status === 200) {
-                    AlertExito('Registrado con Exito')
+                    AlertSuccess('Registrado con Exito')
                     history.push('/main')
                 }
             } catch (error) {
@@ -104,4 +104,4 @@ const NuevoUsuario = ({ history }) => {
     );
 }
 
-export default NuevoUsuario;
+export default NewUser;

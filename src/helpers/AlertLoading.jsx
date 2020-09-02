@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 
-const AlertCargando = (msg) => {
+const AlertLoading = (msg) => {
     Swal.fire({
         title: msg,
         allowEscapeKey: false,
@@ -11,4 +11,4 @@ const AlertCargando = (msg) => {
     })
 }
 
-export default AlertCargando;
+export default AlertLoading;
