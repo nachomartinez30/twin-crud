@@ -25,8 +25,3 @@ En caso de querer cambiar el puerto para su ejecucion, modificar el archivo `ser
 
 > es importante que node js este instalado en el servidor que alojará el sistema
 
-### `npm run startAPI`
-
-Levanta una API falsa para pruebas de desarrollo en el puerto 3001 con el archivos json `2018-1-B-S-66106.json` <br>
-
-> será necesario tener instalado json-server de forma
