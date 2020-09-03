@@ -4,6 +4,10 @@ Este proyecto fue desarrollado con [Create React App](https://github.com/faceboo
 
 En este propoyecto, podrás correr los siguientes comandos:
 
+### `npm install`
+
+Instala las dependencias del sistema<br>
+
 ### `npm start`
 
 Corre la aplicacion en modo desarrollador.<br>
@@ -24,4 +28,3 @@ Levanta el servicio de Express js que permite hacer público el proyecto<br>
 En caso de querer cambiar el puerto para su ejecucion, modificar el archivo `server.js`<br>
 
 > es importante que node js este instalado en el servidor que alojará el sistema
-
